@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imóveis | Eduardo Imóveis</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/components/card.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/pages/imoveis.css">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="page-header">
+        <div class="header-left">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="index.html" class="logo">
+                <div class="logo-icon">EI</div>
+                <div class="logo-text">
+                    <span class="logo-main">Eduardo <span class="highlight">Imóveis</span></span>
+                    <span class="logo-sub">B.Eduardo Investimento</span>
+                </div>
+            </a>
+        </div>
+
+        <nav class="nav-desktop">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+                <li class="nav-item selected"><a href="imoveis.html" class="nav-link"><i class="fas fa-building"></i> Imóveis</a></li>
+                <li class="nav-item"><a href="sobre.html" class="nav-link"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li class="nav-item"><a href="contactos.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contactos</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="login.html" class="header-btn login-btn">
+                <i class="fas fa-user"></i> Entrar
+            </a>
+            <button class="header-cta" id="headerCta">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+        </div>
+
+        <div class="menu-overlay" id="menuOverlay">
+            <div class="menu-panel">
+                <button class="menu-close" id="menuClose"><i class="fas fa-times"></i></button>
+                <ul class="menu-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li class="selected"><a href="imoveis.html"><i class="fas fa-building"></i> Imóveis</a></li>
+                    <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                    <li><a href="contactos.html"><i class="fas fa-phone-alt"></i> Contactos</a></li>
+                    <li><a href="login.html"><i class="fas fa-user"></i> Entrar</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="imoveis-page">
+        <div class="container">
+
+            <!-- Hero da página -->
+            <section class="page-hero">
+                <h1>Catálogo de <span class="highlight">Imóveis</span></h1>
+                <p>Descubra as melhores propriedades em Luanda. Apartamentos, moradias, terrenos e imóveis comerciais selecionados com rigor e qualidade.</p>
+            </section>
+
+            <!-- Filtros -->
+            <section class="filtros-section">
+                <div class="filtros-header">
+                    <div class="filtros-title-wrapper">
+                        <h2><i class="fas fa-sliders-h"></i> Filtrar Imóveis</h2>
+                        <button class="toggle-filtros-btn" id="toggleFiltrosBtn">
+                            <i class="fas fa-chevron-up"></i>
+                        </button>
+                    </div>
+                    <button class="reset-btn" id="resetFiltros">
+                        <i class="fas fa-undo-alt"></i> Limpar filtros
+                    </button>
+                </div>
+
+                <div class="filtros-grid">
+                    <!-- Tipo de negócio -->
+                    <div class="filtros-grupo">
+                        <h3>Tipo de Negócio</h3>
+                        <div class="filtros-opcoes" id="filtroNegocio">
+                            <button class="filtro-btn active" data-filtro="todos">
+                                <i class="fas fa-building"></i> Todos
+                            </button>
+                            <button class="filtro-btn" data-filtro="venda">
+                                <i class="fas fa-tag"></i> Venda
+                            </button>
+                            <button class="filtro-btn" data-filtro="arrendamento">
+                                <i class="fas fa-hand-holding-usd"></i> Arrendamento
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tipo de Imóvel -->
+                    <div class="filtros-grupo">
+                        <h3>Tipo de Imóvel</h3>
+                        <div class="filtros-opcoes" id="filtroTipo">
+                            <button class="filtro-btn active" data-tipo="todos">
+                                <i class="fas fa-building"></i> Todos
+                            </button>
+                            <button class="filtro-btn" data-tipo="Apartamento">
+                                <i class="fas fa-building"></i> Apartamento
+                            </button>
+                            <button class="filtro-btn" data-tipo="Moradia">
+                                <i class="fas fa-home"></i> Moradia
+                            </button>
+                            <button class="filtro-btn" data-tipo="Terreno">
+                                <i class="fas fa-tree"></i> Terreno
+                            </button>
+                            <button class="filtro-btn" data-tipo="Cobertura">
+                                <i class="fas fa-sun"></i> Cobertura
+                            </button>
+                            <button class="filtro-btn" data-tipo="Comercial">
+                                <i class="fas fa-store"></i> Comercial
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Faixa de Preço -->
+                    <div class="filtros-grupo">
+                        <h3>Faixa de Preço (KZ)</h3>
+                        <div class="checkbox-group" id="precoCheckboxes">
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="ate-50"> Até 50.000.000
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="50-100"> 50M - 100M
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="100-200"> 100M - 200M
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="200-300"> 200M - 300M
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="acima-300"> Acima de 300M
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Quartos -->
+                    <div class="filtros-grupo">
+                        <h3>Quartos</h3>
+                        <div class="filtros-opcoes" id="filtroQuartos">
+                            <button class="filtro-btn active" data-quartos="todos">Todos</button>
+                            <button class="filtro-btn" data-quartos="1">1</button>
+                            <button class="filtro-btn" data-quartos="2">2</button>
+                            <button class="filtro-btn" data-quartos="3">3</button>
+                            <button class="filtro-btn" data-quartos="4">4+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pesquisa -->
+                <div class="pesquisa-avancada">
+                    <div class="pesquisa-wrapper">
+                        <input type="text" class="pesquisa-input" id="pesquisaInput"
+                            placeholder="Pesquisar por localização, tipo, descrição...">
+                        <button class="pesquisa-btn" id="pesquisaBtn">
+                            <i class="fas fa-search"></i> Pesquisar
+                        </button>
+                    </div>
+                    <div class="pesquisa-dica">
+                        <i class="fas fa-info-circle"></i>
+                        Pesquise por: "Talatona", "Apartamento", "Moradia", etc.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Bar -->
+            <div class="info-bar">
+                <div class="contador">
+                    Mostrando <strong id="mostrandoInicio">0</strong> - <strong id="mostrandoFim">0</strong> de
+                    <strong id="totalResultados">0</strong> imóveis
+                </div>
+            </div>
+
+            <!-- Controles de Navegação - Topo -->
+            <div class="nav-controls" id="navTop">
+                <button class="nav-btn prev" id="navTopPrev" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="nav-info" id="navTopInfo">Página 1</div>
+                <button class="nav-btn next" id="navTopNext" disabled>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Grid de Imóveis -->
+            <div class="properties-grid" id="itemsGrid">
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>A carregar imóveis...</p>
+                </div>
+            </div>
+
+            <!-- Controles de Navegação - Fundo -->
+            <div class="nav-controls" id="navBottom">
+                <button class="nav-btn prev" id="navBottomPrev" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="nav-info" id="navBottomInfo">Página 1</div>
+                <button class="nav-btn next" id="navBottomNext" disabled>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Detalhes do Imóvel -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-content" id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-company">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-circle">EI</div>
+                        <div class="logo-text">
+                            <div class="logo-primary">Eduardo Imóveis</div>
+                            <div class="logo-secondary">B.Eduardo Investimento</div>
+                        </div>
+                    </a>
+
+                    <p class="company-description">
+                        Imobiliária de luxo em Luanda, especializada em propriedades premium
+                        com transparência, confiança e as melhores localizações.
+                    </p>
+
+                    <div class="footer-social">
+                        <h4>Redes Sociais</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contactos</h3>
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-details">
+                                <div class="contact-label">Telefone / WhatsApp</div>
+                                <a href="tel:+244947135687" class="contact-value">+244 947 135 687</a>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <div class="contact-label">Email</div>
+                                <a href="mailto:contacto@eduardoimoveis.co.ao" class="contact-value">
+                                    contacto@eduardoimoveis.co.ao
+                                </a>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-details">
+                                <div class="contact-label">Localização</div>
+                                <div class="contact-value">Av. 4 de Fevereiro, Luanda</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul class="links-list">
+                        <li><a href="index.html" class="footer-link"><i class="fas fa-home"></i> Início</a></li>
+                        <li><a href="imoveis.html" class="footer-link"><i class="fas fa-building"></i> Imóveis</a></li>
+                        <li><a href="sobre.html" class="footer-link"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                        <li><a href="contactos.html" class="footer-link"><i class="fas fa-phone-alt"></i> Contactos</a></li>
+                        <li><a href="login.html" class="footer-link"><i class="fas fa-user"></i> Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-hours">
+                    <h3>Horário</h3>
+                    <ul class="hours-list">
+                        <li class="hour-item">
+                            <span class="hour-day">Segunda a Sexta</span>
+                            <span class="hour-time">08h00 – 18h00</span>
+                        </li>
+                        <li class="hour-item">
+                            <span class="hour-day">Sábado</span>
+                            <span class="hour-time">09h00 – 13h00</span>
+                        </li>
+                        <li class="hour-item">
+                            <span class="hour-day">Domingo</span>
+                            <span class="hour-time hour-closed">Encerrado</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-cta">
+                <h3 class="cta-title">Procura um imóvel de luxo?</h3>
+                <p class="cta-subtitle">
+                    Fale connosco hoje mesmo e descubra as melhores oportunidades
+                    do mercado imobiliário angolano.
+                </p>
+                <button class="btn btn-primary" id="footerCtaBtn">
+                    <i class="fab fa-whatsapp"></i>
+                    Solicitar Visita
+                </button>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2026 Eduardo Imóveis. Todos os direitos reservados.
+                </div>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Política de Privacidade</a>
+                    <a href="#" class="legal-link">Termos e Condições</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/dados/imoveis.js"></script>
+    <script src="js/shared/utils.js"></script>
+    <script src="js/shared/cardRenderer.js"></script>
+    <script src="js/shared/modal.js"></script>
+    <script src="js/pages/imoveis.js"></script>
+    <script src="js/components/header.js"></script>
+    <script src="js/components/footer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Eduardo Imóveis</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/pages/sobre.css">
+</head>
+
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="page-header">
+        <div class="header-left">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="index.html" class="logo">
+                <div class="logo-icon">EI</div>
+                <div class="logo-text">
+                    <span class="logo-main">Eduardo <span class="highlight">Imóveis</span></span>
+                    <span class="logo-sub">B.Eduardo Investimento</span>
+                </div>
+            </a>
+        </div>
+
+        <nav class="nav-desktop">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Início</a></li>
+                <li class="nav-item"><a href="imoveis.html" class="nav-link"><i class="fas fa-building"></i> Imóveis</a></li>
+                <li class="nav-item selected"><a href="sobre.html" class="nav-link"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li class="nav-item"><a href="contactos.html" class="nav-link"><i class="fas fa-phone-alt"></i> Contactos</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="login.html" class="header-btn login-btn">
+                <i class="fas fa-user"></i> Entrar
+            </a>
+            <button class="header-cta" id="headerCta">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+        </div>
+
+        <div class="menu-overlay" id="menuOverlay">
+            <div class="menu-panel">
+                <button class="menu-close" id="menuClose"><i class="fas fa-times"></i></button>
+                <ul class="menu-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="imoveis.html"><i class="fas fa-building"></i> Imóveis</a></li>
+                    <li class="selected"><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                    <li><a href="contactos.html"><i class="fas fa-phone-alt"></i> Contactos</a></li>
+                    <li><a href="login.html"><i class="fas fa-user"></i> Entrar</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO DA PÁGINA SOBRE ===== -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>Conheça a <span>Eduardo Imóveis</span></h1>
+            <p>Excelência, transparência e as melhores localizações de Luanda</p>
+        </div>
+    </section>
+
+    <!-- ===== NOSSA HISTÓRIA ===== -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="grid-2">
+                <div class="history-content">
+                    <span class="section-tag">NOSSA HISTÓRIA</span>
+                    <h2 class="section-title">Uma década de <span class="highlight">excelência</span> no mercado imobiliário angolano</h2>
+                    <p class="section-subtitle" style="text-align: left; margin-bottom: 30px;">
+                        A Eduardo Imóveis nasceu em 2016 com um propósito claro: oferecer as melhores propriedades de Luanda com transparência, profissionalismo e um atendimento personalizado.
+                    </p>
+                    <p style="color: var(--cinza); margin-bottom: 30px;">
+                        Ao longo dos anos, consolidámo-nos como referência no segmento premium, ajudando centenas de famílias e empresas a encontrar o imóvel ideal. A nossa equipa é formada por profissionais experientes que conhecem profundamente o mercado imobiliário angolano.
+                    </p>
+                    <div class="signature-block">
+                        <div class="signature">
+                            <img src="https://via.placeholder.com/150x50?text=Eduardo+Assinatura" alt="Assinatura do Fundador">
+                        </div>
+                        <div class="founder">
+                            <strong>Eduardo</strong>
+                            <span>Fundador & CEO</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="history-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800" alt="Escritório Eduardo Imóveis" class="rounded-image">
+                    <div class="experience-badge">
+                        <span class="years">10+</span>
+                        <span class="text">Anos de Experiência</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NÚMEROS ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Anos de Experiência</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-building"></i></div>
+                    <div class="stat-number">450+</div>
+                    <div class="stat-label">Imóveis Vendidos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-number">800+</div>
+                    <div class="stat-label">Clientes Satisfeitos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Parceiros</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MISSÃO, VISÃO, VALORES ===== -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">A NOSSA ESSÊNCIA</span>
+                <h2 class="section-title">Missão, Visão & <span class="highlight">Valores</span></h2>
+                <p class="section-subtitle">Princípios que guiam o nosso trabalho diário</p>
+            </div>
+
+            <div class="mvv-grid">
+                <div class="mvv-card">
+                    <div class="mvv-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Missão</h3>
+                    <p>Proporcionar as melhores soluções imobiliárias em Luanda, superando as expectativas dos nossos clientes com transparência, qualidade e profissionalismo.</p>
+                </div>
+                <div class="mvv-card">
+                    <div class="mvv-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Visão</h3>
+                    <p>Ser a imobiliária de referência em Angola, reconhecida pela excelência no atendimento e pela curadoria das melhores propriedades do mercado.</p>
+                </div>
+                <div class="mvv-card">
+                    <div class="mvv-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Valores</h3>
+                    <ul class="values-list">
+                        <li><i class="fas fa-check-circle"></i> Transparência</li>
+                        <li><i class="fas fa-check-circle"></i> Ética</li>
+                        <li><i class="fas fa-check-circle"></i> Compromisso</li>
+                        <li><i class="fas fa-check-circle"></i> Inovação</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EQUIPA ===== -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">A NOSSA EQUIPA</span>
+                <h2 class="section-title">Profissionais <span class="highlight">dedicados</span> a si</h2>
+                <p class="section-subtitle">Conheça as pessoas que fazem da Eduardo Imóveis uma referência</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="Eduardo - Fundador">
+                    </div>
+                    <div class="team-info">
+                        <h4>Eduardo</h4>
+                        <p>Fundador & CEO</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400" alt="Ana Silva">
+                    </div>
+                    <div class="team-info">
+                        <h4>Ana Silva</h4>
+                        <p>Diretora Comercial</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="João Ferreira">
+                    </div>
+                    <div class="team-info">
+                        <h4>João Ferreira</h4>
+                        <p>Consultor Sénior</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="Marta Santos">
+                    </div>
+                    <div class="team-info">
+                        <h4>Marta Santos</h4>
+                        <p>Gestora de Clientes</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORQUE ESCOLHER-NOS ===== -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">DIFERENCIAIS</span>
+                <h2 class="section-title">Porque escolher a <span class="highlight">Eduardo Imóveis</span></h2>
+                <p class="section-subtitle">Razões para confiar no nosso trabalho</p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Transparência Total</h3>
+                    <p>Todas as informações sobre os imóveis são claras e detalhadas, sem surpresas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Melhores Localizações</h3>
+                    <p>Trabalhamos apenas com imóveis nas zonas mais valorizadas de Luanda.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Consultoria Especializada</h3>
+                    <p>Acompanhamento personalizado em todas as etapas da negociação.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-file-signature"></i></div>
+                    <h3>Suporte Jurídico</h3>
+                    <p>Apoio legal para garantir a segurança de todas as transações.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Processo Ágil</h3>
+                    <p>Da visita à escritura, tudo pensado para a sua conveniência.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon"><i class="fas fa-star"></i></div>
+                    <h3>Imóveis Premium</h3>
+                    <p>Cada propriedade é rigorosamente selecionada pela nossa equipa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">DEPOIMENTOS</span>
+                <h2 class="section-title">O que os nossos <span class="highlight">clientes</span> dizem</h2>
+                <p class="section-subtitle">A opinião de quem já realizou o sonho da casa própria connosco</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"A equipa da Eduardo Imóveis foi incrível durante todo o processo. Encontrei o apartamento dos meus sonhos na Marginal e todo o acompanhamento foi profissional e transparente."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108777-466fd6c24301?w=100" alt="Cliente">
+                        <div>
+                            <h4>Maria Fernanda</h4>
+                            <span>Compradora - Apartamento T3</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Recomendo a todos. Comprei uma moradia no condomínio e o suporte foi excecional. Desde a visita até à escritura, tudo muito claro e bem explicado."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" alt="Cliente">
+                        <div>
+                            <h4>Carlos Mendes</h4>
+                            <span>Comprador - Moradia V4</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Profissionais sérios e comprometidos. Ajudaram-me a encontrar o terreno ideal para o meu projeto comercial. Sem dúvida a melhor imobiliária de Luanda."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1531427186654-8fd7a7d1f9b8?w=100" alt="Cliente">
+                        <div>
+                            <h4>Paulo Figueiredo</h4>
+                            <span>Comprador - Terreno</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="cta-section">
+        <h2>Pronto para encontrar o imóvel dos seus sonhos?</h2>
+        <p>Visite-nos, ligue ou envie uma mensagem. Estamos à sua espera!</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/244947135687" class="cta-btn cta-btn-primary" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="imoveis.html" class="cta-btn cta-btn-secondary">
+                <i class="fas fa-building"></i> Ver imóveis
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-company">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-circle">EI</div>
+                        <div class="logo-text">
+                            <div class="logo-primary">Eduardo Imóveis</div>
+                            <div class="logo-secondary">B.Eduardo Investimento</div>
+                        </div>
+                    </a>
+
+                    <p class="company-description">
+                        Imobiliária de luxo em Luanda, especializada em propriedades premium
+                        com transparência, confiança e as melhores localizações.
+                    </p>
+
+                    <div class="footer-social">
+                        <h4>Redes Sociais</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contactos</h3>
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-details">
+                                <div class="contact-label">Telefone / WhatsApp</div>
+                                <a href="tel:+244947135687" class="contact-value">+244 947 135 687</a>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <div class="contact-label">Email</div>
+                                <a href="mailto:contacto@eduardoimoveis.co.ao" class="contact-value">
+                                    contacto@eduardoimoveis.co.ao
+                                </a>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-details">
+                                <div class="contact-label">Localização</div>
+                                <div class="contact-value">Av. 4 de Fevereiro, Luanda</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul class="links-list">
+                        <li><a href="index.html" class="footer-link"><i class="fas fa-home"></i> Início</a></li>
+                        <li><a href="imoveis.html" class="footer-link"><i class="fas fa-building"></i> Imóveis</a></li>
+                        <li><a href="sobre.html" class="footer-link"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                        <li><a href="contactos.html" class="footer-link"><i class="fas fa-phone-alt"></i> Contactos</a></li>
+                        <li><a href="login.html" class="footer-link"><i class="fas fa-user"></i> Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-hours">
+                    <h3>Horário</h3>
+                    <ul class="hours-list">
+                        <li class="hour-item">
+                            <span class="hour-day">Segunda a Sexta</span>
+                            <span class="hour-time">08h00 – 18h00</span>
+                        </li>
+                        <li class="hour-item">
+                            <span class="hour-day">Sábado</span>
+                            <span class="hour-time">09h00 – 13h00</span>
+                        </li>
+                        <li class="hour-item">
+                            <span class="hour-day">Domingo</span>
+                            <span class="hour-time hour-closed">Encerrado</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="copyright">
+                    © 2026 Eduardo Imóveis. Todos os direitos reservados.
+                </div>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Política de Privacidade</a>
+                    <a href="#" class="legal-link">Termos e Condições</a>
+                </div>
+            </div>
+        </div>
+
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/components/header.js"></script>
+    <script src="js/components/footer.js"></script>
+</body>
+
+</html>
