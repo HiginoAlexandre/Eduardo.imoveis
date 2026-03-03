@@ -50,7 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
         heroSecondaryCTA.addEventListener('click', function() {
             const imoveisSection = document.getElementById('imoveis');
             if (imoveisSection) {
-                imoveisSection.scrollIntoView({ behavior: 'smooth' });
+                window.location.href = 'imoveis.html#pesquisaInput';
+                // imoveisSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
     }

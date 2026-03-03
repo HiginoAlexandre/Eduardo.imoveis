@@ -10,7 +10,6 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    position: sticky;
     top: 10px;
     z-index: 1000;
 }

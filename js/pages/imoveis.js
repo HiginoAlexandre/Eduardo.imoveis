@@ -156,22 +156,26 @@ document.addEventListener('DOMContentLoaded', function () {
         renderPropertyCards(imoveisPagina, 'itemsGrid', false);
     }
 
-    // ===== TOGGLE FILTROS =====
+    // ===== TOGGLE FILTROS - SOMENTE QUANDO CLICA =====
     if (toggleFiltrosBtn && filtrosSection) {
-        function temFiltrosAtivos() {
-            return filtroNegocio !== 'todos' ||
-                filtroTipo !== 'todos' ||
-                filtroPreco.length > 0 ||
-                filtroQuartos !== 'todos' ||
-                termoPesquisa !== '';
-        }
-
-        if (!temFiltrosAtivos()) {
-            filtrosSection.classList.add('collapsed');
-        }
-
+        // Remover a classe 'collapsed' inicialmente para garantir que os filtros comecem abertos
+        filtrosSection.classList.remove('collapsed');
+        
+        // Adicionar evento de clique para toggle manual
         toggleFiltrosBtn.addEventListener('click', function () {
             filtrosSection.classList.toggle('collapsed');
+            
+            // Opcional: mudar o ícone quando recolhido/expandido
+            const icon = this.querySelector('i');
+            if (icon) {
+                if (filtrosSection.classList.contains('collapsed')) {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            }
         });
     }
 
@@ -272,7 +276,15 @@ document.addEventListener('DOMContentLoaded', function () {
     if (pesquisaBtn) {
         pesquisaBtn.addEventListener('click', function () {
             termoPesquisa = pesquisaInput ? pesquisaInput.value : '';
-            filtrarImoveis();
+            // filtrarCarros();
+
+            const itemsGrid = document.getElementById('navTop');
+            if (itemsGrid) {
+                itemsGrid.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
     }
 
