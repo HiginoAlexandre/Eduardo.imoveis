@@ -14,11 +14,23 @@ const imoveisData = [
         condicao: "novo",
         status: "sale", // sale, rent, sold
         imagens: [
-            "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800",
-            "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
-            "video/video.mp4"
+            "https://scontent.flad1-2.fna.fbcdn.net/v/t39.30808-6/645733132_122233751762259706_4412658277203677754_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=6RuHyWk87sMQ7kNvwGlt24G&_nc_oc=Adn9DQZmOmd6ts_h5XXJM6SW0Gb8YcLYd-BPcgHAv9ct1lazqE31ofOXlff6MS3WD6Y&_nc_zt=23&_nc_ht=scontent.flad1-2.fna&_nc_gid=G-CQbxICRWccxoNRMZAZtQ&_nc_ss=8&oh=00_Afy8ndtToWWasK23ugxP9SJEki5u_RvrAXnrSq0HVw2i8g&oe=69AC8180",
+            "https://scontent.flad1-1.fna.fbcdn.net/v/t39.30808-6/646768754_122233751726259706_5306343365944691611_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=13d280&_nc_ohc=z7wBUQWVXdsQ7kNvwEnVJfA&_nc_oc=AdnkROIbtUXbwnYdeXznBOJfKxtoUKSD0Fg-iXMieRTVwqVEGewZjB5YLOM5rcevf-Q&_nc_zt=23&_nc_ht=scontent.flad1-1.fna&_nc_gid=3pq1H_r3DAJbOwLvU_QNYQ&_nc_ss=8&oh=00_AfyZrAL1ohqjNOmFk0UidXThenSz-dshpErQW6CLNKdyPw&oe=69AC939E",
+            "https://scontent.flad1-2.fna.fbcdn.net/v/t39.30808-6/645510226_122233751858259706_3586046828008108241_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=13d280&_nc_ohc=mCh0oIrWyioQ7kNvwG44NuI&_nc_oc=Adl3YlPbd5bviX7ZdQC_N_K9bzZLJr6GX4eie97ZcJawBCvfW_sOA9JrFxFoQFDzLcU&_nc_zt=23&_nc_ht=scontent.flad1-2.fna&_nc_gid=sJupdFu7e0YLJ-v4aoR45A&_nc_ss=8&oh=00_AfzbhOm2ipX_8h7WGu0Wh1LDN3p_jrb3MyLUYCnzLj_dsg&oe=69AC7390"
+            
         ],
-        descricao: "Deslumbrante apartamento T3 na Marginal, com vista panorâmica para o mar. Acabamentos de luxo, cozinha totalmente equipada, área de lazer completa e segurança 24h."
+        descricao: `🏡✨ VIVENDA T3 PARA ARRENDAMENTO – PATRIOTA | RUA DOS CÃES ✨🏡
+            Disponível para arrendamento excelente vivenda T3 mobilada, localizada no Patriota – Rua dos Cães, numa zona tranquila e de fácil acesso. Ideal para famílias que procuram conforto e privacidade.
+            🔹 3 Quartos, sendo 1 Suíte
+            🔹 Sala ampla e bem iluminada
+            🔹 Cozinha equipada
+            🔹 WC de apoio
+            🔹 Totalmente mobilada
+            🔹 Quintal espaçoso
+            🔹 Ambiente seguro e familiar
+            💰 Valor da renda: 700.000 Kz
+            Pronta a habitar!
+            Para mais informações ou agendamento de visita, entre em contacto 📞🔑`
     },
     {
         id: 2,
