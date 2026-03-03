@@ -10,6 +10,16 @@ function initModal(imoveisData) {
 
     let currentMediaIndex = 0;
     let currentImovel = null;
+    let videoAtual = null;
+
+    // Função para parar todos os vídeos
+    function pararTodosVideos() {
+        if (videoAtual) {
+            videoAtual.pause();
+            videoAtual.currentTime = 0;
+            videoAtual = null;
+        }
+    }
 
     function updateMedia(index) {
         const container = document.getElementById('mainMediaContainer');
@@ -18,16 +28,20 @@ function initModal(imoveisData) {
         const media = currentImovel.imagens[index];
         const isVideoFile = isVideo(media);
 
+        pararTodosVideos();
         currentMediaIndex = index;
 
         let mediaHTML = '';
         if (isVideoFile) {
             mediaHTML = `
                 <div class="video-wrapper">
-                    <video class="main-media" controls autoplay muted loop>
+                    <video class="main-media" id="modalVideo" preload="metadata" loop playsinline>
                         <source src="${media}" type="video/mp4">
                         Seu navegador não suporta vídeos.
                     </video>
+                    <button class="video-play-btn" id="videoPlayBtn">
+                        <i class="fas fa-play"></i>
+                    </button>
                 </div>
             `;
         } else {
@@ -62,10 +76,24 @@ function initModal(imoveisData) {
         } else {
             container.innerHTML = mediaHTML;
         }
+
+        // Adicionar evento ao botão de play do vídeo
+        const playBtn = document.getElementById('videoPlayBtn');
+        if (playBtn) {
+            playBtn.addEventListener('click', function () {
+                const video = document.getElementById('modalVideo');
+                if (video) {
+                    video.play();
+                    video.muted = false;
+                    this.style.display = 'none';
+                    videoAtual = video;
+                }
+            });
+        }
     }
 
     function updateActiveThumbnail(index) {
-        document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+        document.querySelectorAll('.thumbnail, .thumbnail-wrapper').forEach((thumb, i) => {
             if (i === index) {
                 thumb.classList.add('active');
             } else {
@@ -85,8 +113,21 @@ function initModal(imoveisData) {
         const badgeText = getBadgeText(imovel.status || 'sale');
         const tipoIcon = getTipoIcon(imovel.tipo);
 
+        // Gerar thumbnails com ícone de play para vídeos
         const thumbnailsHTML = imovel.imagens.map((media, index) => {
-            return `<img src="${media}" class="thumbnail ${index === 0 ? 'active' : ''}" data-index="${index}">`;
+            const isVideoFile = isVideo(media);
+            if (isVideoFile) {
+                return `
+                    <div class="thumbnail-wrapper" data-index="${index}">
+                        <video class="thumbnail" muted preload="metadata">
+                            <source src="${media}" type="video/mp4">
+                        </video>
+                        <div class="thumbnail-play-icon"><i class="fas fa-play"></i></div>
+                    </div>
+                `;
+            } else {
+                return `<img src="${media}" class="thumbnail ${index === 0 ? 'active' : ''}" data-index="${index}">`;
+            }
         }).join('');
 
         modalContent.innerHTML = `
@@ -187,7 +228,7 @@ function initModal(imoveisData) {
         document.body.style.overflow = 'hidden';
 
         setTimeout(() => {
-            document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
+            document.querySelectorAll('.thumbnail, .thumbnail-wrapper').forEach((thumb, index) => {
                 thumb.addEventListener('click', function () {
                     currentMediaIndex = index;
                     updateMedia(index);
@@ -218,6 +259,7 @@ function initModal(imoveisData) {
     }
 
     function fecharModal() {
+        pararTodosVideos();
         modal.classList.remove('active');
         setTimeout(() => {
             modalOverlay.classList.remove('active');

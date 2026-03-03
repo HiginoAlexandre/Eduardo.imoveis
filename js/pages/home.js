@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== RENDERIZAR IMÓVEIS EM DESTAQUE =====
     renderPropertyCards(imoveisData, 'propertiesGrid', true);
+    initVideoHoverImoveis(imoveisData);
     
     // ===== CONTADORES ANIMADOS =====
     function animarContador(elementId, valorFinal, duracao = 2000) {

@@ -16,7 +16,7 @@ const imoveisData = [
         imagens: [
             "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800",
             "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800",
-            "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800"
+            "video/video.mp4"
         ],
         descricao: "Deslumbrante apartamento T3 na Marginal, com vista panorâmica para o mar. Acabamentos de luxo, cozinha totalmente equipada, área de lazer completa e segurança 24h."
     },

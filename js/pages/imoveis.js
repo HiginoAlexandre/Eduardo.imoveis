@@ -154,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Usar o renderizador compartilhado
         renderPropertyCards(imoveisPagina, 'itemsGrid', false);
+        initVideoHoverImoveis(imoveisData);
     }
 
     // ===== TOGGLE FILTROS - SOMENTE QUANDO CLICA =====
